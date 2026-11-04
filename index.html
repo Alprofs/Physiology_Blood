@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PhysioLab OSPE Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app-container">
+        <!-- شاشة الرئيسية -->
+        <div id="home-screen" class="screen active">
+            <div class="lab-badge">
+                <span class="pulse-dot"></span>
+                <span>OSPE & PRACTICAL PHYSIOLOGY</span>
+            </div>
+            
+            <h1 class="main-title">
+                Physio<span class="highlight">Lab</span>
+                <span class="sub-title">OSPE Training App</span>
+            </h1>
+
+            <div id="lectures-list" class="lectures-container"></div>
+
+            <div id="home-footer">
+                <p class="created-by">Developed with precision by</p>
+                <p class="author-name">𝓐𝓱𝓶𝓮𝓭 𝓜𝓸𝓼𝓽𝓪𝓯𝓪</p>
+            </div>
+        </div>
+
+        <!-- شاشة المراجعة -->
+        <div id="revision-screen" class="screen">
+            <div class="rev-header">
+                <h2 id="rev-title">Revision</h2>
+                <button type="button" class="close-btn" onclick="goHome()" aria-label="Close">✕</button>
+            </div>
+            <div id="mindmap-board" class="mindmap-board"></div>
+        </div>
+
+        <!-- شاشة الكويز -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <button type="button" class="close-btn" onclick="goHome()" aria-label="Close">✕</button>
+                <div class="progress-bar-bg">
+                    <div id="bar" class="progress-bar-fill"></div>
+                </div>
+                <div id="counter" class="quiz-counter">0 / 0</div>
+            </div>
+
+            <!-- زر التبديل بين الاختياري وتكوين الكلمة -->
+            <div class="mode-switch-wrapper">
+                <button type="button" id="btn-mode-mcq" class="mode-btn active" onclick="setQuizMode('mcq')">MCQ</button>
+                <button type="button" id="btn-mode-word" class="mode-btn" onclick="setQuizMode('word')">Word Puzzle 🧩</button>
+            </div>
+
+            <div id="round-info">Round (1)</div>
+            
+            <div class="question-box">
+                <!-- حاوية الصورة الاختيارية -->
+                <div id="q-img-wrap" class="q-img-wrap" style="display: none;">
+                    <img id="q-img" src="" alt="OSPE Station Image" onclick="openImageViewer(this.src)">
+                    <div class="img-hint-tap">🔍 Tap to inspect</div>
+                </div>
+                <div id="q-txt">...</div>
+            </div>
+
+            <!-- خيارات الإجابة -->
+            <div class="options-container" id="opt-box"></div>
+            
+            <div id="hint-box" class="quiz-hint-box" style="display: none;"></div>
+
+            <div class="footer">
+                <button type="button" id="prev-btn" class="nav-btn prev" onclick="goPrev()">Prev</button>
+                <button type="button" id="next-btn" class="nav-btn next" onclick="goNext()">Next</button>
+            </div>
+        </div>
+
+        <!-- نافذة عرض الصورة بالحجم الكبير (مخفية تماماً بدون أي نص افتراضي) -->
+        <div id="img-modal" class="img-modal" style="display: none !important;" onclick="closeImageViewer()">
+            <img id="img-modal-target" style="display: block;">
+        </div>
+
+        <!-- نافذة الفوز -->
+        <div id="win-overlay" class="overlay">
+            <div class="dialog">
+                <h1 class="win-title">🎉</h1>
+                <p id="win-msg" class="win-text">Great Job!</p>
+                <button type="button" id="home-btn" class="btn-main" onclick="closeWinOverlay()">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="lang-fab" onclick="toggleLanguage()" aria-label="Switch Language">EN</button>
+
+    <script>
+        let allLectures = [];
+    </script>
+
+    <!-- ملفات البيانات -->
+    <script src="lec1.js"></script>
+    <script src="lec2.js"></script>
+    <script src="lec3.js"></script>
+    <script src="lec4.js"></script>
+    <script src="lec5.js"></script>
+    <script src="lec6.js"></script>
+    
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,980 @@
+/* ==========================================================================
+   1. المتغيرات والأساسيات
+   ========================================================================== */
+:root {
+    --bg-color: #F0F4F8;
+    --grey-light: #ECEFF1;
+    --grey-border: #B0BEC5;
+
+    --btn-green: #12D11E;
+    --btn-green-dark: #0fb319;
+    --btn-blue: #2196F3;
+    --btn-blue-dark: #1976D2;
+    --progress-yellow: #FFC107;
+
+    --correct-bg: #E8F5E9;
+    --correct-border: #2E7D32;
+    --wrong-bg: #FFEBEE;
+    --wrong-border: #C62828;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Almarai', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+#app-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main-title {
+    color: var(--btn-blue);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 900;
+}
+
+/* ==========================================================================
+   2. إدارة الشاشات
+   ========================================================================== */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-bottom: 110px;
+    overflow-y: auto;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* ==========================================================================
+   3. قائمة المحاضرات
+   ========================================================================== */
+.lectures-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.branch-title {
+    width: 100%;
+    margin: 20px 0 10px 0;
+    padding-bottom: 8px;
+    border-bottom: 3px dashed #F8BBD0;
+    color: #E91E63;
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.lectures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.lec-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 3px solid var(--grey-border);
+    border-radius: 20px;
+    box-shadow: 0 6px 0 var(--grey-border);
+}
+
+.lec-title {
+    color: #333333;
+    font-size: 19px;
+    font-weight: 800;
+    text-align: center;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lec-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 14px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-action:active {
+    transform: translateY(4px);
+}
+
+.btn-rev {
+    background: var(--btn-blue);
+    box-shadow: 0 4px 0 var(--btn-blue-dark);
+}
+
+.btn-rev:active {
+    box-shadow: 0 0 0 transparent;
+}
+
+.btn-quiz {
+    background: var(--btn-green);
+    box-shadow: 0 4px 0 var(--btn-green-dark);
+}
+
+.btn-quiz:active {
+    box-shadow: 0 0 0 transparent;
+}
+
+/* ==========================================================================
+   4. رأس الشاشات وأزرار الإغلاق (X ثابت ناحية اليمين دائماً)
+   ========================================================================== */
+.rev-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    border-bottom: 3px dashed #BBDEFB;
+}
+
+.rev-header #rev-title {
+    margin: 0;
+    padding: 8px 25px;
+    background: #E3F2FD;
+    border-radius: 16px;
+    color: var(--btn-blue-dark);
+    font-size: 24px;
+    font-weight: 900;
+}
+
+/* زر X في شاشة المراجعة ثابت ناحية اليمين */
+.rev-header .close-btn {
+    position: absolute;
+    top: 50%;
+    right: 15px !important;
+    left: auto !important;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 26px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 50%;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.close-btn:hover {
+    background: #ECEFF1;
+}
+
+.close-btn:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+/* رأس شاشة الكويز: تم ضبط الاتجاه لليمين ليثبت زر X على اليمين دائماً */
+.quiz-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 15px;
+    gap: 12px;
+    direction: rtl !important; /* يضمن وجود X في أقصى اليمين دائماً */
+}
+
+.quiz-header .close-btn {
+    position: static;
+    transform: none;
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 26px;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.quiz-header .close-btn:active {
+    transform: scale(0.9);
+}
+
+/* ==========================================================================
+   5. شاشة المراجعة ومكوناتها
+   ========================================================================== */
+.mindmap-board {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.kid-section-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    margin-top: 15px;
+    padding: 25px 15px 15px;
+    position: relative;
+    width: 100%;
+}
+
+.kid-section-title {
+    color: #FFFFFF;
+    border-radius: 15px;
+    padding: 8px 20px;
+    font-size: 17px;
+    font-weight: 900;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kid-section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.kid-info-box {
+    padding: 15px;
+    border-radius: 14px;
+    text-align: start;
+}
+
+.kid-info-box .node-title {
+    font-size: 17px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.kid-info-box .node-content {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* بطاقة الاستكشاف التفاعلية النظيفة */
+.kid-reveal-card {
+    background: #FFFFFF;
+    border: 2px solid;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.kid-reveal-card:hover {
+    transform: translateY(-2px);
+}
+
+.kid-reveal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.kid-reveal-icon {
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+}
+
+.kid-reveal-card.open .kid-reveal-icon {
+    transform: rotate(180deg);
+}
+
+.kid-reveal-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 18px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #333333;
+    text-align: start;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.kid-reveal-card.open .kid-reveal-body {
+    max-height: 500px;
+    padding: 15px 18px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+/* جدول المقارنة */
+.kid-compare-table {
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    width: 100%;
+}
+
+.compare-col {
+    flex: 1;
+    padding: 15px;
+    text-align: start;
+}
+
+.compare-header {
+    font-weight: 900;
+    font-size: 15px;
+    margin-bottom: 8px;
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
+    padding-bottom: 5px;
+}
+
+.compare-body {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* الخطوات والترتيب */
+.kid-steps-container {
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px dashed #ccc;
+    text-align: start;
+}
+
+.kid-steps-container .node-title {
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.compact-steps-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.compact-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.compact-step-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 900;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.compact-step-text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* الكبسولات والتصنيفات (Tags/Chips) */
+.kid-tags-container {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.kid-tags-container .node-title {
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.kid-chip {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 2px solid;
+    background: #FFFFFF;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   6. شاشة الكويز (صندوق السؤال + صندوق التوضيح + الاختيارات)
+   ========================================================================== */
+.progress-bar-bg {
+    flex-grow: 1;
+    height: 16px;
+    background: #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--progress-yellow);
+    transition: width 0.3s ease;
+}
+
+.quiz-counter {
+    font-weight: 800;
+    min-width: 55px;
+    font-size: 16px;
+    direction: ltr;
+    text-align: center;
+}
+
+#round-info {
+    width: 100%;
+    margin-bottom: 15px;
+    color: #1976D2;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* (1) صندوق السؤال: في مربع مع حواف وظل مجسم والخط عادي وليس Bold */
+.question-box {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    background: #FFFFFF;
+    border: 3px solid var(--grey-border);
+    border-radius: 18px;
+    box-shadow: 0 5px 0 var(--grey-border);
+    color: #212121;
+    font-size: 18px;
+    font-weight: 400; /* خط عادي مريح للعين */
+    text-align: start;
+    line-height: 1.6;
+}
+
+#q-txt {
+    font-weight: 400; /* غير عريض */
+    line-height: 1.6;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+}
+
+@media (min-width: 600px) {
+    .options-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.option-btn {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    background: #FFFFFF;
+    border: 3px solid var(--grey-border);
+    border-radius: 18px;
+    color: #111111;
+    font-size: 17px;
+    font-weight: 800;
+    text-align: start;
+    box-shadow: 0 5px 0 var(--grey-border);
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+    background: #FAFAFA;
+}
+
+.option-btn:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 var(--grey-border);
+}
+
+.option-btn.correct {
+    background: var(--correct-bg) !important;
+    border-color: var(--correct-border) !important;
+    color: var(--correct-border) !important;
+    box-shadow: 0 5px 0 var(--correct-border);
+}
+
+.option-btn.wrong {
+    background: var(--wrong-bg) !important;
+    border-color: var(--wrong-border) !important;
+    color: var(--wrong-border) !important;
+    box-shadow: 0 5px 0 var(--wrong-border);
+}
+
+/* (2) صندوق التوضيح Key Explanation: بظل مجسم سفلي Solid Shadow بدلاً من الجانب */
+.quiz-hint-box {
+    display: none;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 18px;
+    padding: 18px 20px;
+    background-color: #FFF8E1;
+    border: 3px solid #FFA000;
+    border-radius: 18px;
+    box-shadow: 0 5px 0 #FF8F00; /* Solid Shadow مجسم في الأسفل مثل الاختيارات */
+    text-align: start;
+    animation: hintFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes hintFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quiz-hint-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 900;
+    color: #E65100;
+    margin-bottom: 8px;
+}
+
+.quiz-hint-content {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #37474F;
+}
+
+/* (4) شريط التنقل: "السابق" ثابت يمين و "التالي" ثابت يسار دائماً */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    direction: rtl !important; /* يجعل العنصر الأول (السابق) في اليمين دائماً والثاني (التالي) في اليسار */
+    gap: 15px;
+    width: 100%;
+    padding: 15px 20px;
+    background: #FFFFFF;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 16px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.nav-btn.prev {
+    background: var(--btn-blue);
+    box-shadow: 0 5px 0 var(--btn-blue-dark);
+}
+
+.nav-btn.next {
+    background: var(--btn-green);
+    box-shadow: 0 5px 0 var(--btn-green-dark);
+}
+
+.nav-btn:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 transparent;
+}
+
+.nav-btn:disabled {
+    background: #CFD8DC;
+    box-shadow: 0 5px 0 #B0BEC5;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   7. الفوتر، الزر العائم، والنافذة المنبثقة
+   ========================================================================== */
+#home-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--bg-color);
+    border-top: 2px solid var(--grey-border);
+    text-align: center;
+    z-index: 50;
+}
+
+#home-footer .created-by {
+    margin: 0;
+    color: #777777;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#home-footer .author-name {
+    margin: 4px 0 0 0;
+    color: var(--bg-color);
+    font-size: 16px;
+    cursor: default;
+}
+
+/* تعديل مكان زر اللغة عشان ميعملش Overlap مع أزرار الكويز */
+#lang-fab {
+    position: fixed;
+    bottom: 90px; /* تم الرفع من 75 إلى 90 */
+    right: 20px !important;
+    left: auto !important;
+    z-index: 1000;
+    width: 55px;
+    height: 55px;
+    background-color: #C2185B; /* لون طبي مناسب للفسيولوجي بدلاً من الأسود الكئيب */
+    border: none;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#lang-fab:active {
+    transform: scale(0.9);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.dialog {
+    width: 90%;
+    max-width: 380px;
+    padding: 30px 20px;
+    background: #FFFFFF;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.win-title {
+    color: var(--btn-green);
+    font-size: 40px;
+    margin: 0 0 10px 0;
+}
+
+.win-text {
+    font-size: 20px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.btn-main {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--btn-green);
+    border: none;
+    border-radius: 16px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 800;
+    box-shadow: 0 5px 0 var(--btn-green-dark);
+    cursor: pointer;
+}
+
+.btn-main:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 transparent;
+}
+/* ==========================================================================
+   9. تصميم لعبة تكوين الكلمة الطبية (Word Builder Game) - الإصدار المحسن
+   ========================================================================== */
+.word-game-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 650px;
+    margin: 10px auto;
+    gap: 20px;
+}
+
+/* حاوية الخانات: تتوسط الشاشة وترتب الكلمات رأسياً */
+.word-slots-container {
+    display: flex;
+    flex-direction: column; /* يجعل كل كلمة في سطر مستقل */
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 65px;
+    padding: 16px 12px;
+    background: #FFFFFF;
+    border: 2px dashed #B0BEC5;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* سطر كل كلمة مستقلة */
+.word-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+/* المربع الخاص بالحرف */
+.word-slot {
+    width: 44px;
+    height: 50px;
+    background: #F0F4F8;
+    border: 2.5px solid var(--grey-border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 900;
+    color: #2196F3;
+    box-shadow: 0 4px 0 var(--grey-border);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease, background-color 0.2s;
+}
+
+.word-slot.filled {
+    background: #E3F2FD;
+    border-color: #2196F3;
+    color: #0D47A1;
+    box-shadow: 0 4px 0 #1976D2;
+}
+
+.word-slot.filled:active {
+    transform: translateY(3px);
+}
+
+/* حالة الإجابة الصحيحة والخاطئة */
+.word-slots-container.correct {
+    border-color: var(--correct-border);
+    background-color: var(--correct-bg);
+}
+.word-slots-container.correct .word-slot.filled {
+    background-color: #A5D6A7;
+    border-color: var(--correct-border);
+    color: #1B5E20;
+    box-shadow: 0 4px 0 var(--correct-border);
+}
+
+.word-slots-container.wrong {
+    border-color: var(--wrong-border);
+    background-color: var(--wrong-bg);
+    animation: shakeAnim 0.4s ease-in-out;
+}
+.word-slots-container.wrong .word-slot.filled {
+    background-color: #EF9A9A;
+    border-color: var(--wrong-border);
+    color: #B71C1C;
+    box-shadow: 0 4px 0 var(--wrong-border);
+}
+
+@keyframes shakeAnim {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+}
+
+/* بنك الحروف مفرود ومتوسط تماماً */
+.word-bank-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.word-letters-bank {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.letter-btn {
+    min-width: 45px;
+    height: 50px;
+    padding: 0 10px;
+    background: #FFFFFF;
+    border: 3px solid #78909C;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #37474F;
+    box-shadow: 0 4px 0 #546E7A;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease, opacity 0.2s;
+}
+
+.letter-btn:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 transparent;
+}
+
+.letter-btn:disabled {
+    opacity: 0.12;
+    cursor: not-allowed;
+    border-color: #CFD8DC;
+    box-shadow: none;
+    transform: none;
+}
+
+/* شريط أزرار المسح والإعادة */
+.word-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn-word-ctrl {
+    padding: 10px 22px;
+    border: 2px solid #90A4AE;
+    border-radius: 14px;
+    background: #ECEFF1;
+    color: #37474F;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #78909C;
+    transition: transform 0.1s ease;
+}
+
+.btn-word-ctrl:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #78909C;
+}
+/* زر التبديل بين الاختياري وتكوين الكلمة */
+.mode-switch-wrapper {
+    display: flex;
+    background: #E0E0E0;
+    border-radius: 14px;
+    padding: 4px;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.mode-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 800;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mode-btn.active {
+    background: #FFFFFF;
+    color: #1976D2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
