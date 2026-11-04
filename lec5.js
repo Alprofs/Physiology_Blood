@@ -1,78 +1,130 @@
 allLectures.push({
     id: "sec5_hemostasis",
     title: {
-        en: "Section 5: Hemostatic Function Tests",
-        ar: "السكشن الخامس: اختبارات النزف والتجلط (BT & CT)"
+        en: "Section 5: (BT & CT)",
+        ar: "السكشن الخامس: اختبارات النزف والتجلط وتقييم الصفائح الدموية"
     },
     revision: [
         {
             title: {
-                en: "1. Indications & Bleeding Time (BT)",
-                ar: "١. دواعي الفحص وزمن النزف (Bleeding Time)"
+                en: "1. Clinical Indications & General Hemostasis Concepts",
+                ar: "١. الدواعي الإكلينيكية والمفاهيم العامة لعملية إيقاف النزف"
             },
             branches: [
                 {
-                    type: "steps",
-                    nodeTitle: { en: "Indications for Hemostatic Tests (Viva/Written)", ar: "دواعي إجراء اختبارات النزف والتجلط" },
-                    steps: [
-                        { en: "History of frequent/persistent bleeding from minor cuts or spontaneous bleeding.", ar: "وجود تاريخ لنزيف متكرر أو تلقائي من جروح بسيطة." },
-                        { en: "Before minor and major surgeries (e.g. tooth extraction, tonsillectomy).", ar: "قبل العمليات الجراحية الكبرى والصغرى (مثل خلع الأسنان)." },
-                        { en: "Before taking biopsies (especially bone marrow, liver, kidney).", ar: "قبل أخذ عينات الأنسجة (كعينة الكبد والكلى والنخاع)." },
-                        { en: "Before and during anticoagulant drug therapy.", ar: "قبل وأثناء العلاج بالأدوية المضادة للتجلط ومراقبتها." },
-                        { en: "Family history of congenital bleeding disorders.", ar: "وجود تاريخ عائلي لأمراض سيولة الدم الوراثية." }
-                    ]
-                },
-                {
                     type: "info",
-                    nodeTitle: { en: "Bleeding Time (BT): Definition & Principle", ar: "زمن النزف: التعريف والأساس العلمي" },
+                    nodeTitle: { en: "Indications of Hemostatic Tests (Viva & Written)", ar: "دواعي إجراء اختبارات النزف والتجلط" },
                     content: {
-                        en: "*Definition:* The time elapsed between skin puncture and spontaneous, unassisted stoppage of bleeding.\n*Principle:* It tests primary hemostasis and depends entirely on the **adequate number and function of Blood Platelets** and capillary integrity.",
-                        ar: "*التعريف:* الوقت المنقضي بين وخز الجلد وتوقف النزيف تلقائياً بدون أي مساعدة.\n*الأساس العلمي:* يقيس المرحلة الأولى لإيقاف النزف، ويعتمد كلياً على **كفاءة وعدد الصفائح الدموية (Platelets)** وسلامة الشعيرات الدموية."
+                        en: "Hemostatic function tests (BT & CT) are essential screening tools in the following conditions:\n1. **History of bleeding:** Frequent, spontaneous, or persistent bleeding from minor cuts/bruises.\n2. **Pre-operative assessment:** Before any surgical intervention (major or minor, including tooth extraction and tonsillectomy).\n3. **Pre-biopsy evaluation:** Before invasive tissue biopsies (e.g., liver, kidney, bone marrow).\n4. **Anticoagulant monitoring:** Before and during therapy with anticoagulants (e.g., Heparin, Warfarin).\n5. **Family history:** Screening individuals with a suspected familial history of congenital bleeding disorders.",
+                        ar: "تعد اختبارات وظائف التخثر أدوات فحص استباقية بالغة الأهمية في الحالات الآتية:\n١. **التاريخ المرضي للنزف:** حدوث نزيف متكرر، تلقائي، أو مستمر بعد الإصابات البسيطة والخدوش.\n٢. **ما قبل العمليات الجراحية:** قبل أي تدخل جراحي كبيراً كان أو صغيراً (بما في ذلك خلع الأسنان واستئصال اللوزتين).\n٣. **قبل أخذ الخزعات (Biopsies):** لتفادي النزف الداخلي عند أخذ عينات الكبد أو الكلى أو النخاع العظمي.\n٤. **متابعة مضادات التجلط:** قبل وأثناء العلاج بمميعات الدم (مثل الهيبارين والوارفارين).\n٥. **التاريخ العائلي:** عند وجود أقارب يعانون من اعتلالات وراثية في سيولة الدم."
                     }
                 },
                 {
                     type: "compare",
-                    val1Title: { en: "Normal Bleeding Time", ar: "المعدل الطبيعي لزمن النزف" },
-                    val1: { en: "**1 – 6 minutes**\n(Tested using filter paper every 15s)", ar: "**من 1 إلى 6 دقائق**\n(بالمسح بورق الترشيح كل 15 ثانية)" },
-                    val2Title: { en: "Prolonged Bleeding Time in", ar: "يطول زمن النزف في" },
-                    val2: { en: "**Purpura**\n(Thrombocytopenia or platelet dysfunction)", ar: "**مرض الفرفرية (Purpura)**\n(لنقص أو خلل وظائف الصفائح الدموية)" }
+                    val1Title: { en: "Primary Hemostasis (Tested by BT)", ar: "المرحلة الأولى لإيقاف النزف (يقيسها BT)" },
+                    val1: { 
+                        en: "• **Mechanism:** Vascular spasm (vasoconstriction) followed by platelet adhesion, activation, and aggregation to form the **Primary Platelet Plug**.\n• **Key Player:** Vascular wall integrity + Blood Platelets (number & function).", 
+                        ar: "• **الآلية:** انقباض الوعاء الدموي يليه التصاق وتنشيط وتجمع الصفائح الدموية لتكوين **السدادة الصفيحية الأولية (Platelet Plug)**.\n• **العنصر الحاكم:** سلامة جدار الوعاء الدموي + الصفائح الدموية (عدداً ووظيفة)." 
+                    },
+                    val2Title: { en: "Secondary Hemostasis (Tested by CT)", ar: "المرحلة الثانية لإيقاف النزف (يقيسها CT)" },
+                    val2: { 
+                        en: "• **Mechanism:** Activation of the blood coagulation cascade leading to the cleavage of soluble fibrinogen into insoluble **Fibrin Threads** which stabilize the plug into a clot.\n• **Key Player:** Plasma Clotting Factors (Intrinsic & Common pathways).", 
+                        ar: "• **الآلية:** تنشيط شلال عوامل التجلط الذي يحول بروتين الفيبرينوجين الذائب إلى **شبكة صلبة من خيوط الفيبرين (Fibrin Threads)** تدعم التجلط.\n• **العنصر الحاكم:** عوامل التجلط في البلازما (المسار الداخلي والمشترك)." 
+                    }
                 }
             ]
         },
         {
             title: {
-                en: "2. Coagulation Time (CT) & Crucial Comparisons",
-                ar: "٢. زمن التجلط (Clotting Time) والمقارنات الهامة"
+                en: "2. Bleeding Time (BT): Core Physiology & Pathology",
+                ar: "٢. زمن النزف (Bleeding Time): الأساس الفسيولوجي والحالات المرضية"
             },
             branches: [
                 {
                     type: "info",
-                    nodeTitle: { en: "Coagulation Time (CT): Definition & Principle", ar: "زمن التجلط: التعريف والأساس العلمي" },
+                    nodeTitle: { en: "Definition, Principle & Tools", ar: "التعريف، الأساس العلمي، والأدوات المستخدمة" },
                     content: {
-                        en: "*Definition:* The time between entry of blood into the capillary tube (or slide) and the **formation of fibrin threads**.\n*Principle:* It tests secondary hemostasis and depends on **plasma clotting factors** (Intrinsic pathway).",
-                        ar: "*التعريف:* الوقت المنقضي بين دخول الدم للأنبوبة الشعرية وتكون **خيوط الفيبرين (Fibrin threads)**.\n*الأساس العلمي:* يقيس عملية التخثر ويعتمد على **عوامل التجلط في البلازما (Clotting Factors)** وخاصة المسار الداخلي."
+                        en: "• **Definition:** The time interval between skin puncture and the spontaneous, unassisted stoppage of bleeding.\n• **Principle:** It reflects primary hemostasis and depends strictly on the **adequate number and normal function of blood platelets**, in addition to capillary vasoconstriction.\n• **Equipment Used:** Sterile lancet, stopwatch, 70% alcohol, and circular **filter paper** (blotting every 15 seconds without pressing the skin).",
+                        ar: "• **التعريف:** الفترة الزمنية المنقضية من لحظة وخز الجلد وحتى توقف النزف تلقائياً دون أي تدخل خارجي.\n• **الأساس العلمي:** يعبر عن المرحلة الأولى لإيقاف النزف ويعتمد تماماً على **كفاءة العدد والوظيفة للصفائح الدموية**، وسلامة الشعيرات الدموية وقدرتها على الانقباض.\n• **الأدوات:** مشرط معقم (Lancet)، ساعة إيقاف، كحول 70%، و**ورق ترشيح (Filter paper)** لمسح الدم كل 15 ثانية دون لمس الجلد."
                     }
                 },
                 {
                     type: "compare",
-                    val1Title: { en: "Capillary Tube Method", ar: "طريقة الأنبوبة الشعرية" },
-                    val1: { en: "• Uses *non-heparinized* capillary tube.\n• Break off 0.5 cm every *30 seconds* until a visible thread of fibrin appears.\n• **More accurate**.", ar: "• تستخدم أنبوبة شعرية *غير مهبْرَنة*.\n• يكسر 0.5 سم كل *30 ثانية* حتى يظهر خيط الفيبرين المترابط.\n• **أكثر دقة**." },
+                    val1Title: { en: "Normal Bleeding Time Range", ar: "المعدل الفسيولوجي الطبيعي" },
+                    val1: { 
+                        en: "**1 – 6 minutes**\n(Average 2 to 4 minutes depending on technique).", 
+                        ar: "**من 1 إلى 6 دقائق**\n(بمتوسط 2 إلى 4 دقائق حسب طبيعة الجلد)." 
+                    },
+                    val2Title: { en: "Prolonged Bleeding Time (> 6 min)", ar: "أسباب زيادة وطول زمن النزف" },
+                    val2: { 
+                        en: "1. **Purpura (Thrombocytopenia):** Low platelet count (< 50,000/μl).\n2. **Platelet Dysfunction (Thrombasthenia):** Qualitative defect (e.g. Aspirin administration).\n3. **von Willebrand Disease:** Impaired platelet adhesion.", 
+                        ar: "١. **مرض الفرفرية (Purpura):** نقص عدد الصفائح الدموية عن المعدل الحرج.\n٢. **خلل وظائف الصفائح:** مثل تناول الأسبرين (يثبط إنتاج Thromboxane A2).\n٣. **مرض فون ويلبراند:** خلل التصاق الصفائح بجدار الوعاء الدموي." 
+                    }
+                }
+            ]
+        },
+        {
+            title: {
+                en: "3. Coagulation Time (CT): Principles & Methods",
+                ar: "٣. زمن التجلط (Coagulation Time): الأسس العلمية وطرق القياس"
+            },
+            branches: [
+                {
+                    type: "info",
+                    nodeTitle: { en: "Definition & The Glass Contact Mechanism", ar: "التعريف وآلية التنشيط بالملامسة مع الزجاج" },
+                    content: {
+                        en: "• **Definition:** The time interval between the shedding/entry of blood into the non-heparinized capillary tube (or slide) and the visible **formation of fibrin threads**.\n• **Principle:** Measures the efficiency of the intrinsic and common coagulation pathways.\n• **How does clotting occur in glass tubes/slides? (Viva Q):**\nWhen blood touches the glass surface, the negatively charged glass activates **Factor XII (Hageman factor)**. This initiates the **Intrinsic Coagulation Pathway**, culminating in Thrombin generating insoluble **Fibrin threads** from Fibrinogen.",
+                        ar: "• **التعريف:** الزمن المنقضي بين خروج الدم ودخوله الأنبوبة غير المهبرنة (أو الشريحة) وظهور **خيوط الفيبرين (Fibrin threads)** الصلبة بالعين المجردة.\n• **الأساس العلمي:** يقيس قدرة وكفاءة عوامل التجلط في البلازما (المسار الداخلي والمشترك).\n• **آلية التجلط على الزجاج (سؤال شفوي هام):**\nملامسة الدم لسطح الزجاج المشحون سالباً يؤدي إلى التنشيط التلقائي لـ **العامل الثاني عشر (Factor XII)**، مما يطلق شرارة **المسار الداخلي للتخثر (Intrinsic Pathway)** وصولاً لإنزيم الثرومبين الذي يحول الفيبرينوجين لخيوط فيبرين."
+                    }
+                },
+                {
+                    type: "compare",
+                    val1Title: { en: "Capillary Tube Method (Standard)", ar: "طريقة الأنبوبة الشعرية (الأدق)" },
+                    val1: { 
+                        en: "• Uses: **Non-heparinized** capillary tube.\n• Interval: Snap/break off 0.5 cm of tube every **30 seconds**.\n• End-point: Appearance of an intact, spanning fibrin thread connecting broken ends.\n• Status: **More accurate** (less evaporation, stable temperature).", 
+                        ar: "• الأداة: أنبوبة شعرية زجاجية **غير مهبْرَنة**.\n• التوقيت: كسر قطعة بطول 0.5 سم كل **30 ثانية**.\n• نقطة النهاية: ظهور خيط فيبرين لزج يصل بين طرفي الأنبوبة المكسورة.\n• التقييم: **أكثر دقة** (لعدم جفاف الدم وثبات الظروف)." 
+                    },
                     val2Title: { en: "Glass Slide Method", ar: "طريقة الشريحة الزجاجية" },
-                    val2: { en: "• Drop of blood on a clean dry slide.\n• Pass a clean pin through drop every *30 seconds* until fibrin threads adhere.\n• **Less accurate**.", ar: "• نقطة دم كبيرة على شريحة جافة.\n• يمرر دبوس كل *30 ثانية* حتى تلتصق به خيوط الفيبرين.\n• **أقل دقة**." }
+                    val2: { 
+                        en: "• Uses: Clean, dry microscopic glass slide + pin/needle.\n• Interval: Pass the pin tip through the blood drop every **30 seconds**.\n• End-point: Fibrin threads adhere to pin and lift out of the drop.\n• Status: **Less accurate** (exposed to evaporation, surface cooling, drying).", 
+                        ar: "• الأداة: شريحة زجاجية جافة + إبرة أو دبوس نظيف.\n• التوقيت: تمرير سن الدبوس في قطرة الدم كل **30 ثانية**.\n• نقطة النهاية: التصاق خيوط الفيبرين بالدبوس وخروجها من القطرة.\n• التقييم: **أقل دقة** (لتعرض الدم للهواء والجفاف والبرودة)." 
+                    }
                 },
                 {
                     type: "compare",
                     val1Title: { en: "Normal Coagulation Time", ar: "المعدل الطبيعي لزمن التجلط" },
-                    val1: { en: "**5 – 8 minutes**", ar: "**من 5 إلى 8 دقائق**" },
-                    val2Title: { en: "Prolonged Coagulation Time in", ar: "يطول زمن التجلط في" },
-                    val2: { en: "**Hemophilia**\n(Congenital deficiency of Clotting Factor VIII or IX)", ar: "**مرض الهيموفيليا (Hemophilia)**\n(نقص وراثي في عوامل التجلط مثل عامل 8 أو 9)" }
+                    val1: { 
+                        en: "**5 – 8 minutes**\n(Values up to 10-11 mins may occur depending on ambient temperature).", 
+                        ar: "**من 5 إلى 8 دقائق**\n(قد يصل إلى 10 دقائق في درجات الحرارة الباردة)." 
+                    },
+                    val2Title: { en: "Causes of Prolonged CT (> 8 min)", ar: "أسباب زيادة زمن التجلط" },
+                    val2: { 
+                        en: "1. **Hemophilia A:** Congenital deficiency of Factor VIII.\n2. **Hemophilia B:** Deficiency of Factor IX (Christmas disease).\n3. **Severe Liver Diseases:** Failure to synthesize clotting factors (I, II, V, VII, IX, X).\n4. **Vitamin K Deficiency:** Impairs factors II, VII, IX, X.\n5. **Heparin / Anticoagulant overdose.**", 
+                        ar: "١. **الهيموفيليا (أ):** نقص وراثي في عامل التجلط الثامن (Factor VIII).\n٢. **الهيموفيليا (ب):** نقص عامل التجلط التاسع (Factor IX).\n٣. **أمراض الكبد المتقدمة:** عجز الكبد عن تصنيع بروتينات التجلط.\n٤. **نقص فيتامين K:** المسؤول عن تنشيط عوامل التجلط (10, 9, 7, 2).\n٥. **جرعات زائدة من الهيبارين ومضادات التجلط.**" 
+                    }
+                }
+            ]
+        },
+        {
+            title: {
+                en: "4. Missing Manual Details: Platelets & Definitive Differentials",
+                ar: "٤. تفاصيل المذكرة الهامة: وظائف الصفائح والمقارنة التشخيصية"
+            },
+            branches: [
+                {
+                    type: "info",
+                    nodeTitle: { en: "Platelets (Thrombocytes): Count & Functions (Viva Essential)", ar: "الصفائح الدموية: العدد والوظائف الفسيولوجية (أسئلة شفوي)" },
+                    content: {
+                        en: "• **Normal Platelet Count:** **150,000 – 450,000 / μL** (or cells/mm³).\n• **Physiological Functions:**\n1. **Hemostatic Plug:** Adhesion (to exposed collagen via vWF), activation, and aggregation.\n2. **Vasoconstriction:** Secrete Serotonin and Thromboxane A2 (TXA2) to narrow damaged vessels.\n3. **Clot Acceleration:** Provide **Platelet Factor 3 (PF3)**, an essential phospholipid surface for factor activation.\n4. **Clot Retraction:** Contain contractile proteins (**Thrombosthenin**) that shrink the clot and approximate wound edges.\n5. **Vascular Repair:** Secrete PDGF (Platelet-Derived Growth Factor) for endothelial healing.",
+                        ar: "• **العدد الطبيعي للصفائح:** **150,000 إلى 450,000 لكل ميكرولتر** دم مكعب.\n• **الوظائف الفسيولوجية الأساسية:**\n١. **تكوين السدادة الصفيحية:** الالتصاق بالكولاجين، والتنشيط، وتجمع الصفائح لإغلاق الثقب.\n٢. **تضييق الأوعية النازفة:** إفراز السيروتونين والثرومبوكسان A2 لانقباض الوعاء المصاب.\n٣. **تسريع التجلط:** إفراز الفوسفوليبيد (Platelet Factor 3) الضروري لتنشيط عوامل التخثر.\n٤. **انكماش الجلطة (Clot Retraction):** تحتوي على بروتين منقبض يسمى (Thrombosthenin) لتقريب حواف الجرح.\n٥. **إصلاح الأنسجة:** إفراز عوامل نمو (PDGF) لإعادة بناء بطانة الوعاء الدموي."
+                    }
                 },
                 {
                     type: "reveal",
-                    nodeTitle: { en: "Crucial Exam Comparison: Purpura vs Hemophilia", ar: "مقارنة الامتحان الحاسمة: الفرفرية مقابل الهيموفيليا" },
+                    nodeTitle: { en: "Diagnostic Master Table: Purpura vs Hemophilia", ar: "الجدول التشخيصي الفارق: الفرفرية (Purpura) ضد الهيموفيليا (Hemophilia)" },
                     content: {
-                        en: "• In **Purpura**: Bleeding Time is *PROLONGED* (> 6 min), but Clotting Time is *NORMAL* (because clotting factors are intact).\n• In **Hemophilia**: Clotting Time is *PROLONGED* (> 8 min), but Bleeding Time is *NORMAL* (because platelets are intact).",
-                        ar: "• في **الفرفرية (Purpura)**: زمن النزف *طويل* وزمن التجلط *طبيعي* (لسلامة عوامل التجلط).\n• في **الهيموفيليا (Hemophilia)**: زمن التجلط *طويل* وزمن النزف *طبيعي* (لسلامة عدد ووظيفة الصفائح الدموية)."
+                        en: "• **Purpura (Thrombocytopenia):**\n  - Bleeding Time (BT): **PROLONGED (> 6 min)** [Platelets are defective/low].\n  - Coagulation Time (CT): **NORMAL (5 - 8 min)** [Clotting factors are completely intact].\n  - Platelet Count: **DECREASED (< 150,000/μL)**.\n\n• **Hemophilia (Factor VIII / IX deficiency):**\n  - Bleeding Time (BT): **NORMAL (1 - 6 min)** [Platelets are normal; plug forms rapidly].\n  - Coagulation Time (CT): **PROLONGED (> 8 min)** [Intrinsic pathway is stalled].\n  - Platelet Count: **NORMAL**.",
+                        ar: "• **الفرفرية (Purpura):**\n  - زمن النزف (BT): **ممتد وطويل (> 6 دقائق)** [بسبب نقص أو خلل الصفائح].\n  - زمن التجلط (CT): **طبيعي (5 - 8 دقائق)** [لسلامة عوامل التجلط تماماً].\n  - عدد الصفائح: **منخفض (< 150,000)**.\n\n• **الهيموفيليا (Hemophilia):**\n  - زمن النزف (BT): **طبيعي (1 - 6 دقائق)** [الصفائح سليمة وتكون السدادة الأولية فوراً].\n  - زمن التجلط (CT): **ممتد وطويل جداً (> 8 دقائق)** [بسبب غياب خيوط الفيبرين].\n  - عدد الصفائح: **طبيعي تماماً**."
                     }
                 }
             ]
@@ -81,152 +133,152 @@ allLectures.push({
     quiz: [
         {
             q: {
-                en: "What clinical condition causes a prolonged Bleeding Time while Clotting Time remains normal?",
-                ar: "ما هو المرض الإكلينيكي الذي يطول فيه زمن النزف (BT) بينما يظل زمن التجلط (CT) طبيعياً؟"
+                en: "A patient presents with prolonged Bleeding Time (9 mins) and a normal Coagulation Time (6 mins). What is the most likely diagnosis?",
+                ar: "مريض لديه زمن نزف ممتد (9 دقائق) مع زمن تجلط طبيعي تماماً (6 دقائق). ما هو التشخيص المرجح؟"
             },
             opts: {
-                en: ["PURPURA", "HEMOPHILIA", "ANEMIA", "POLYCYTHEMIA"],
-                ar: ["فرفرية", "هيموفيليا", "أنيميا", "بولي سيثيميا"]
+                en: ["Purpura (Thrombocytopenia)", "Hemophilia A", "Vitamin K deficiency", "Obstructive jaundice"],
+                ar: ["مرض الفرفرية (نقص الصفائح)", "هيموفيليا (أ)", "نقص فيتامين K", "اليرقان الانسدادي"]
             },
             correct: 0,
             hint: {
-                en: "Purpura is due to platelet deficiency; thus Bleeding Time is prolonged, but Coagulation Time is normal.",
-                ar: "مرض الفرفرية ينشأ عن نقص الصفائح الدموية فيطول زمن النزف بينما يظل زمن التجلط طبيعياً."
+                en: "Purpura is characterized by platelet deficiency, resulting in prolonged BT, while plasma clotting factors are intact (normal CT).",
+                ar: "الفرفرية ناتجة عن خلل أو نقص بالصفائح فيطول زمن النزف، مع بقاء عوامل التجلط سليمة فيكون زمن التجلط طبيعياً."
             }
         },
         {
             q: {
-                en: "What genetic disorder causes a prolonged Coagulation Time while Bleeding Time remains normal?",
-                ar: "ما هو المرض الوراثي الذي يطول فيه زمن التجلط (CT) بينما يظل زمن النزف (BT) طبيعياً؟"
+                en: "Which clinical condition causes a prolonged Coagulation Time while the Bleeding Time remains completely normal?",
+                ar: "أي الحالات التالية تؤدي إلى زيادة وطول زمن التجلط فقط مع بقاء زمن النزف طبيعياً تماماً؟"
             },
             opts: {
-                en: ["HEMOPHILIA", "PURPURA", "LEUKEMIA", "SPHEROCYTOSIS"],
-                ar: ["هيموفيليا", "فرفرية", "لوكيميا", "سفيروسيتوزيس"]
+                en: ["Hemophilia", "Idiopathic Thrombocytopenic Purpura", "Aspirin toxicity", "Severe capillary fragility"],
+                ar: ["الهيموفيليا", "فرفرية نقص الصفائح", "سمية وتأثير الأسبرين", "هشاشة الشعيرات الدموية"]
             },
             correct: 0,
             hint: {
-                en: "Hemophilia is a deficiency of clotting factors (Factor VIII or IX); Clotting Time is prolonged, Bleeding Time is normal.",
-                ar: "الهيموفيليا ناتجة عن نقص عوامل التجلط فيطول زمن التجلط فقط مع بقاء زمن النزف طبيعياً."
+                en: "In Hemophilia, primary plug formation by platelets is normal (normal BT), but fibrin clot formation is delayed due to factor deficiency (prolonged CT).",
+                ar: "في الهيموفيليا تتجمع الصفائح بشكل سليم فتغلق الوعاء طبيعياً (BT سليم)، بينما يتعطل شلال تكوين الفيبرين لنقص عامل التجلط فيطول (CT)."
             }
         },
         {
             q: {
-                en: "What is the normal physiological range for Bleeding Time (BT)?",
+                en: "What is the normal physiological value for Bleeding Time (BT)?",
                 ar: "ما هو المدى الفسيولوجي الطبيعي لزمن النزف (Bleeding Time)؟"
             },
             opts: {
-                en: ["1-6 MINUTES", "5-8 MINUTES", "10-15 MINUTES", "30 SECONDS"],
-                ar: ["1-6 دقائق", "5-8 دقائق", "10-15 دقيقة", "30 ثانية"]
+                en: ["1 – 6 minutes", "5 – 8 minutes", "10 – 15 minutes", "20 – 30 seconds"],
+                ar: ["1 – 6 دقائق", "5 – 8 دقائق", "10 – 15 دقيقة", "20 – 30 ثانية"]
             },
             correct: 0,
             hint: {
-                en: "Normal Bleeding Time is 1 to 6 minutes.",
-                ar: "زمن النزف الطبيعي يتراوح بين دقيقة إلى 6 دقائق."
+                en: "Normal Bleeding Time is 1 to 6 minutes using the blotting filter paper method.",
+                ar: "زمن النزف الطبيعي المعتمد في الفسيولوجي المعملي يتراوح بين 1 إلى 6 دقائق."
             }
         },
         {
             q: {
-                en: "What is the normal physiological range for Coagulation (Clotting) Time?",
-                ar: "ما هو المدى الطبيعي لزمن التجلط (Coagulation Time)؟"
+                en: "What is the normal reference range for Coagulation (Clotting) Time?",
+                ar: "ما هو المعدل الطبيعي المعتمد لزمن التجلط (Coagulation Time)؟"
             },
             opts: {
-                en: ["5-8 MINUTES", "1-6 MINUTES", "15-20 MINUTES", "30 MINUTES"],
-                ar: ["5-8 دقائق", "1-6 دقائق", "15-20 دقيقة", "30 دقيقة"]
+                en: ["5 – 8 minutes", "1 – 6 minutes", "10 – 20 minutes", "1 – 2 minutes"],
+                ar: ["5 – 8 دقائق", "1 – 6 دقائق", "10 – 20 دقيقة", "1 – 2 دقيقة"]
             },
             correct: 0,
             hint: {
-                en: "Normal Coagulation Time is usually 5 to 8 minutes.",
-                ar: "المعدل الطبيعي لزمن التجلط يتراوح بين 5 إلى 8 دقائق."
+                en: "Normal Clotting Time by the non-heparinized capillary tube method is 5 to 8 minutes.",
+                ar: "يتراوح زمن التجلط الطبيعي بطريقة الأنبوبة الشعرية الزجاجية بين 5 إلى 8 دقائق."
             }
         },
         {
             q: {
-                en: "Bleeding Time depends primarily on the adequate number and function of which element?",
-                ar: "يعتمد زمن النزف (BT) بشكل أساسي على كفاءة وعدد أي من مكونات الدم؟"
+                en: "Which clotting factor is directly activated by surface contact with glass in the capillary tube / slide method?",
+                ar: "ما هو عامل التجلط الذي يتم تنشيطه مباشرة بمجرد ملامسة الدم لسطح زجاج الأنبوبة الشعرية؟"
             },
             opts: {
-                en: ["PLATELETS", "CLOTTING FACTORS", "FIBRINOGEN", "RED BLOOD CELLS"],
-                ar: ["الصفائح الدموية", "عوامل التجلط", "الفيبرينوجين", "كرات الدم الحمراء"]
+                en: ["Factor XII (Hageman factor)", "Factor VIII (Antihemophilic)", "Factor I (Fibrinogen)", "Factor II (Prothrombin)"],
+                ar: ["العامل الثاني عشر (Hageman factor)", "العامل الثامن", "الفيبرينوجين", "البروثرومبين"]
             },
             correct: 0,
             hint: {
-                en: "Bleeding Time is a direct test of platelet plug formation and capillary integrity.",
-                ar: "زمن النزف يختبر المرحلة الأولى لتكوين السدادة الصفيحية ويعتمد على الصفائح الدموية."
+                en: "Contact of blood with electronegative glass triggers the intrinsic pathway via activation of Factor XII.",
+                ar: "ملامسة الدم للزجاج تنشط العامل الثاني عشر (Factor XII) لتبدأ خطوات المسار الداخلي للتخثر."
             }
         },
         {
             q: {
-                en: "Coagulation Time is defined as the time needed for the formation of what visible structures?",
-                ar: "يعرف زمن التجلط بأنه الوقت المنقضي من خروج الدم حتى ظهور وتكون خيوط ماذا؟"
+                en: "What is the physiological range for normal resting platelet count in a healthy adult?",
+                ar: "ما هو المعدل الطبيعي لعدد الصفائح الدموية في الشخص السليم البالغ؟"
             },
             opts: {
-                en: ["FIBRIN THREADS", "PLATELET PLUG", "ROULEAUX", "ANTIBODIES"],
-                ar: ["خيوط الفيبرين", "سدادة صفيحية", "تراص الرولو", "أجسام مضادة"]
+                en: ["150,000 – 450,000 / μL", "50,000 – 100,000 / μL", "5,000 – 10,000 / μL", "4.5 – 5.5 million / μL"],
+                ar: ["150,000 – 450,000 / ميكرولتر", "50,000 – 100,000 / ميكرولتر", "5,000 – 10,000 / ميكرولتر", "4.5 – 5.5 مليون / ميكرولتر"]
             },
             correct: 0,
             hint: {
-                en: "Coagulation time marks the transition of fibrinogen into visible insoluble fibrin threads.",
-                ar: "زمن التجلط هو الوقت اللازم لتحول الفيبرينوجين إلى خيوط فيبرين صلبة ومرئية."
+                en: "Normal platelet count ranges from 150,000 to 450,000 per microliter of blood.",
+                ar: "يتراوح عدد الصفائح الطبيعي بين 150 ألف إلى 450 ألف صفيحة في الميكرولتر المكعب."
             }
         },
         {
             q: {
-                en: "What type of capillary tube is used to determine Coagulation Time in the lab?",
-                ar: "ما نوع الأنبوبة الشعرية المستخدمة لقياس زمن التجلط في المعمل؟"
+                en: "Why is the capillary tube method considered more accurate than the glass slide method for Coagulation Time?",
+                ar: "لماذا تعتبر طريقة الأنبوبة الشعرية أكثر دقة من طريقة الشريحة الزجاجية في قياس زمن التجلط؟"
             },
             opts: {
-                en: ["NON-HEPARINIZED", "HEPARINIZED", "WESTERGREN", "SAHLI"],
-                ar: ["غير مهبرنة", "مهبرنة", "ويسترجرين", "ساهلي"]
+                en: ["It protects blood from drying and surface cooling", "It uses heparin to speed clotting", "It requires centrifugation", "It uses larger volumes of chemical reagents"],
+                ar: ["تحمي قطرة الدم من الجفاف والبرودة الخارجية", "تستخدم الهيبارين لتسريع التجلط", "تعتمد على الطرد المركزي", "تعتمد على كميات كواشف كيميائية كبيرة"]
             },
             correct: 0,
             hint: {
-                en: "Non-heparinized tubes allow blood to coagulate naturally via the intrinsic contact pathway.",
-                ar: "تستخدم أنبوبة شعرية غير مضاف لها هيبارين (Non-heparinized) حتى يتجلط الدم طبيعياً."
+                en: "The capillary tube prevents rapid evaporation and heat loss, which falsely accelerate or delay clotting on an open slide.",
+                ar: "الأنبوبة الشعرية تحفظ عينة الدم بداخلها وتمنع تبخر السوائل أو برودتها على عكس الشريحة المكشوفة."
             }
         },
         {
             q: {
-                en: "In the capillary tube method for clotting time, every how many seconds is the tube broken?",
-                ar: "في طريقة الأنبوبة الشعرية لقياس زمن التجلط، كل كم ثانية يتم كسر قطعة من الأنبوبة؟"
+                en: "Which contractile protein within platelets is responsible for clot retraction (drawing wound margins together)?",
+                ar: "ما هو البروتين المنقبض الموجود داخل الصفائح الدموية والمسؤول عن ظاهرة انكماش الجلطة (Clot Retraction)؟"
             },
             opts: {
-                en: ["30 SECONDS", "15 SECONDS", "60 SECONDS", "2 MINUTES"],
-                ar: ["30 ثانية", "15 ثانية", "60 ثانية", "دقيقتين"]
+                en: ["Thrombosthenin", "Fibrinogen", "Albumin", "Prothrombin"],
+                ar: ["ثرومبوستينين (Thrombosthenin)", "فيبرينوجين", "ألبومين", "بروثرومبين"]
             },
             correct: 0,
             hint: {
-                en: "At 30-second intervals, break off a 0.5 cm piece of tube to check for fibrin threads.",
-                ar: "يتم كسر مسافة نصف سنتيمتر من الأنبوبة كل 30 ثانية حتى نرى خيط الفيبرين."
+                en: "Thrombosthenin is an actin/myosin-like contractile protein inside platelets that tightens and consolidates the fibrin mesh.",
+                ar: "بروتين الثرومبوستينين ينقبض ليقلص حجم شبكة الفيبرين ويقرب حواف الوعاء الممزق لتسريع الالتئام."
             }
         },
         {
             q: {
-                en: "In the filter paper method for Bleeding Time, how often are blood drops blotted?",
-                ar: "في اختبار زمن النزف بورق الترشيح، كل كم ثانية يتم مسح قطرة الدم؟"
+                en: "Which of the following conditions prolongs Coagulation Time due to impaired hepatic synthesis of clotting factors?",
+                ar: "أي الحالات التالية تؤدي لزيادة زمن التجلط بسبب عجز الكبد عن تصنيع عوامل التخثر؟"
             },
             opts: {
-                en: ["15 SECONDS", "30 SECONDS", "1 MINUTE", "5 SECONDS"],
-                ar: ["15 ثانية", "30 ثانية", "دقيقة", "5 ثوان"]
+                en: ["Liver Cirrhosis", "Iron deficiency anemia", "Aplastic anemia", "Erythrocytosis"],
+                ar: ["تليف الكبد المتقدم (Liver Cirrhosis)", "أنيميا نقص الحديد", "الأنيميا اللاتنسجية", "زيادة كرات الدم الحمراء"]
             },
             correct: 0,
             hint: {
-                en: "Wipe blood drops with filter paper every 15 seconds without touching the skin.",
-                ar: "تمسح قطرات الدم كل 15 ثانية على ورق الترشيح دون ملامسة جلد الإصبع."
+                en: "The liver synthesizes almost all coagulation factors; severe liver failure leads to factor depletion and prolonged CT.",
+                ar: "الكبد هو المصنع الرئيسي لمعظم عوامل التجلط في البلازما؛ لذلك يؤدي فشل الكبد لزيادة زمن التجلط."
             }
         },
         {
             q: {
-                en: "Which of the following is an absolute surgical indication for hemostatic function tests?",
-                ar: "أي من الحالات التالية يعتبر دافعاً جراحياً حتمياً لإجراء اختبارات النزف والتجلط؟"
+                en: "What type of capillary tube MUST be selected to measure Coagulation Time in the lab?",
+                ar: "ما هو نوع الأنبوبة الشعرية الواجب استخدامها لإجراء اختبار زمن التجلط معملياً؟"
             },
             opts: {
-                en: ["TOOTH EXTRACTION", "BLOOD PRESSURE TEST", "TAKING ECG", "CHECKING PULSE"],
-                ar: ["خلع الأسنان والجراحة", "قياس ضغط الدم", "رسم القلب", "قياس النبض"]
+                en: ["Non-heparinized (plain blue tip)", "Heparinized (red tip)", "Wintrobe tube", "Sahli graduated tube"],
+                ar: ["أنبوبة غير مهبْرَنة (طرف أزرق)", "أنبوبة مهبْرَنة (طرف أحمر)", "أنبوبة وينتروب", "أنبوبة ساهلي المدرجة"]
             },
             correct: 0,
             hint: {
-                en: "Before any surgery, even minor ones like tooth extraction, hemostatic tests are mandatory.",
-                ar: "قبل أي تدخل جراحي ولو بسيط كخلع الأسنان يجب التأكد من كفاءة تجلط الدم."
+                en: "Non-heparinized tubes are mandatory to allow natural contact clotting; heparinized tubes would inhibit thrombin and prevent clot formation.",
+                ar: "يجب اختيار أنبوبة خالية من الهيبارين (Non-heparinized) ليحدث التجلط؛ فالهيبارين مانع تجلط قوي يفسد التجربة."
             }
         }
     ]

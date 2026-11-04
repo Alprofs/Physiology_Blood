@@ -1,71 +1,99 @@
 allLectures.push({
     id: "sec4_pcv",
     title: {
-        en: "Section 4: Hematocrit Value (Packed Cell Volume, PCV)",
-        ar: "السكشن الرابع: حجم الخلايا المتكدسة (PCV / Hematocrit)"
+        en: "Section 4: (PCV)",
+        ar: "السكشن الرابع: (PCV / Hematocrit)"
     },
     revision: [
         {
             title: {
-                en: "1. Definition, Principle & Buffy Coat",
-                ar: "١. التعريف، الأساس العلمي والطبقة البيضاء (Buffy Coat)"
+                en: "1. Definition, Principle & Blood Column Layers",
+                ar: "١. التعريف، الأساس العلمي وطبقات عمود الدم المفصول"
             },
             branches: [
                 {
                     type: "info",
-                    nodeTitle: { en: "What is PCV / Hematocrit?", ar: "ما هو حجم الخلايا المتكدسة (PCV)؟" },
+                    nodeTitle: { 
+                        en: "Definition & Physiological Significance", 
+                        ar: "التعريف والأهمية الفسيولوجية لاختبار PCV" 
+                    },
                     content: {
-                        en: "It is the **percentage of RBCs** in total blood volume.\n*Significance:* It is the **most accurate and simplest test** for detecting anemia and polycythemia, and essential for calculating RBC indices (MCV, MCH, MCHC).",
-                        ar: "هو **النسبة المئوية لحجم كرات الدم الحمراء** من إجمالي حجم الدم.\n*الأهمية:* هو **أبسط وأدق اختبار** للكشف عن فقر الدم (الأنيميا) وزيادة كرات الدم (البولي سيثيميا)، ويستخدم لحساب مؤشرات كرات الدم."
+                        en: "**Hematocrit (PCV)** is defined as the **percentage of RBCs in the total blood volume**.\n\n• **Clinical Significance:**\n1. It is the **simplest and most accurate** test for screening and confirming the presence of **Anemia** and **Polycythemia**.\n2. Fundamental parameter required for calculating **RBC Indices** (MCV, MCH, MCHC) used in morphological anemia classification.\n3. Essential indicator to evaluate hemodilution, hemoconcentration, and hydration status.",
+                        ar: "**حجم الخلايا المتكدسة (PCV)** يُعرّف بأنه **النسبة المئوية لحجم كرات الدم الحمراء بالنسبة لإجمالي حجم الدم**.\n\n• **الأهمية الإكلينيكية والتشخيصية:**\n١. يُعتبر **أبسط وأدق اختبار** لمسح وتشخيص الإصابة بـ **فقر الدم (Anemia)** أو **احمرار الدم وزيادة الكرات (Polycythemia)**.\n٢. عامل أساسي لحساب **مؤشرات كرات الدم الحمراء (RBC Indices)** مثل (MCV, MCH, MCHC) لتحديد نوع الأنيميا بدقة.\n٣. مؤشر أساسي لتقييم حالات الجفاف، زيادة سيولة الدم، وتركيز البلازما."
                     }
                 },
                 {
                     type: "reveal",
-                    nodeTitle: { en: "Principle of PCV Test", ar: "الأساس العلمي لقياس PCV" },
+                    nodeTitle: { 
+                        en: "Principle of Centrifugal Packing", 
+                        ar: "الأساس العلمي لعملية التكدس بالطرد المركزي" 
+                    },
                     content: {
-                        en: "**Centrifugal Packing:** Using high-speed centrifugal force, RBCs are packed tightly at the bottom of the tube below the plasma due to their higher specific gravity.",
-                        ar: "**التكدس بقوة الطرد المركزي:** بفعل قوة الطرد المركزي العالية، تتكدس كرات الدم الحمراء في قاع الأنبوبة أسفل البلازما بسبب ثقل كثافتها النوعية."
+                        en: "When whole blood containing anticoagulant is subjected to high centrifugal force, the formed elements pack tightly at the bottom because of their **higher specific gravity** compared to plasma.\n\nThe blood column cleanly separates into 3 distinct layers from top to bottom based on relative density.",
+                        ar: "عند تعريض عينة دم كاملة تحتوي على مانع تجلط لقوة طرد مركزي عالية، تتكدس العناصر الخلوية في القاع أسفل البلازما نظراً لـ **ارتفاع كثافتها النوعية (Higher specific gravity)** مقارنة بالبلازما.\n\nينفصل عمود الدم تلقائياً إلى 3 طبقات متميزة تعتمد على التدرج في الكثافة من الأعلى للأسفل."
                     }
                 },
                 {
                     type: "info",
-                    nodeTitle: { en: "The Buffy Coat (Exam Figure & Question)", ar: "الطبقة البيضاء الرقيقة (Buffy Coat)" },
+                    nodeTitle: { 
+                        en: "Layers of Centrifuged Blood & The Buffy Coat", 
+                        ar: "طبقات الدم المفصول والطبقة البيضاء (Buffy Coat)" 
+                    },
                     content: {
-                        en: "After centrifuging blood, three layers form:\n1. **Top layer (55%):** Clear Plasma.\n2. **Middle thin layer (1%):** **Buffy Coat** consisting of **WBCs (White blood cells) and Platelets**.\n3. **Bottom layer (45%):** Packed Red Blood Cells (RBCs).",
-                        ar: "بعد فصل الدم بجهاز الطرد المركزي يتكون 3 طبقات:\n١. **الطبقة العلوية (55%):** البلازما.\n٢. **الطبقة الوسطى الرقيقة (1%):** تسمى **Buffy Coat** وتتكون من **كرات الدم البيضاء (WBCs) والصفائح الدموية (Platelets)**.\n٣. **الطبقة السفلية (45%):** كرات الدم الحمراء المتكدسة (Packed RBCs)."
+                        en: "Following standard centrifugation, the tube shows:\n\n1. **Top Supernatant Layer (~55%):** Clear, straw-colored **Plasma** (water, electrolytes, plasma proteins, clotting factors).\n2. **Middle Thin White Layer (~1%):** The **Buffy Coat**, consisting entirely of **Leukocytes (WBCs) and Platelets (Thrombocytes)**.\n3. **Bottom Packed Layer (~45%):** **Packed Red Blood Cells (RBCs)** containing hemoglobin, forming the measured Hematocrit value.",
+                        ar: "عقب عملية الطرد المركزي تظهر محتويات الأنبوبة في ثلاث طبقات واضحة:\n\n١. **الطبقة العلوية الرائقة (~55%):** **بلازما الدم (Plasma)** باللون الأصفر الشفاف (ماء، بروتينات البلازما، أملاح وعوامل تجلط).\n٢. **الطبقة الوسطى الرقيقة (~1%):** تسمى **Buffy Coat** (الطبقة البيضاء) وتتكون بالكامل من **كرات الدم البيضاء (WBCs) والصفائح الدموية (Platelets)**.\n٣. **الطبقة السفلية المتكدسة (~45%):** **كرات الدم الحمراء (Packed RBCs)** المحملة بالهيموجلوبين، وهي التي تمثل قراءة الهيماتوكريت المطلوبة."
                     }
                 },
                 {
                     type: "compare",
-                    val1Title: { en: "Normal PCV in Males", ar: "المعدل الطبيعي في الذكور" },
-                    val1: { en: "**Average: 46%**\nRange: *42% – 52%*", ar: "**المتوسط: 46%**\nالمدى: *42% – 52%*" },
-                    val2Title: { en: "Normal PCV in Females", ar: "المعدل الطبيعي في الإناث" },
-                    val2: { en: "**Average: 41%**\nRange: *37% – 47%*", ar: "**المتوسط: 41%**\nالمدى: *37% – 47%*" }
+                    val1Title: { en: "Normal Values in Adult Males", ar: "المعدل الطبيعي في الذكور البالغين" },
+                    val1: { 
+                        en: "• **Average:** **46%**\n• **Normal Range:** **42% – 52%**\n*(Higher due to the anabolic & stimulatory effects of Testosterone on erythropoiesis)*", 
+                        ar: "• **المتوسط:** **46%**\n• **المدى الطبيعي:** **42% إلى 52%**\n*(أعلى مقارنة بالإناث نظراً لتأثير هرمون التستوستيرون المحفز لإنتاج خلايا الدم الحمراء)*" 
+                    },
+                    val2Title: { en: "Normal Values in Adult Females", ar: "المعدل الطبيعي في الإناث البالغات" },
+                    val2: { 
+                        en: "• **Average:** **41%**\n• **Normal Range:** **37% – 47%**\n*(Lower due to regular monthly menstrual blood loss and lower androgen levels)*", 
+                        ar: "• **المتوسط:** **41%**\n• **المدى الطبيعي:** **37% إلى 47%**\n*(أقل بسبب الفقدان الدوري للدم أثناء الطمث وغياب الأندروجينات المحفزة)*" 
+                    }
                 }
             ]
         },
         {
             title: {
-                en: "2. Procedure Details & Clinical Causes",
-                ar: "٢. تفاصيل التجربة والأسباب الإكلينيكية للزيادة والنقصان"
+                en: "2. Equipment OSPE Identification & Clinical Interpretations",
+                ar: "٢. التعرف على الأدوات المعملية (OSPE) والتفسيرات المرضية"
             },
             branches: [
                 {
-                    type: "steps",
-                    nodeTitle: { en: "Procedure & Equipment", ar: "أدوات وخطوات التجربة المعملية" },
-                    steps: [
-                        { en: "Use a *heparinized capillary tube* and fill it 1/2 to 3/4 full with finger-prick blood.", ar: "استخدام *أنبوبة شعرية مهبْرَنة* وملؤها إلى نصفها أو ثلاثة أرباعها بدم من وخز الإصبع." },
-                        { en: "Seal one end of the capillary tube firmly with *plasticine or wax*.", ar: "إغلاق أحد طرفي الأنبوبة بإحكام بواسطة *الصلصال (Plasticine) أو الشمع*." },
-                        { en: "Place in *micro-hematocrit centrifuge* and spin for **15 minutes**.", ar: "وضع الأنبوبة في جهاز الطرد المركزي الدقيق وتدويرها لمدة **15 دقيقة**." },
-                        { en: "Read the packed cell volume percentage on the *hematocrit reader card*.", ar: "قراءة النسبة المئوية للكرات المتكدسة باستخدام *مسطرة وقارئ الهيماتوكريت*." }
-                    ]
+                    type: "info",
+                    nodeTitle: { 
+                        en: "OSPE Spotter: Tubes & Materials Identification", 
+                        ar: "محطة العملي (OSPE): تحديد الأنابيب والأدوات" 
+                    },
+                    content: {
+                        en: "• **Micro-hematocrit Capillary Tube:** A thin glass capillary tube coated with **Heparin** (indicated by a red ring) used for direct finger-prick blood. Sealed at one end with **Plasticine or Wax** before centrifugation.\n• **Micro-hematocrit Centrifuge:** High-speed centrifuge rotating the capillaries at ~12,000 rpm for **15 minutes**.\n• **Hematocrit Reader Card/Scale:** Calibrated graphic reader used to measure the height of packed RBCs relative to total blood height.\n• **Alternative Tube:** **Wintrobe tube** (11 cm long, calibrated 0-100 mm) used for macro-hematocrit and ESR.",
+                        ar: "• **الأنبوبة الشعرية (Micro-hematocrit tube):** أنبوبة زجاجية دقيقة مبطنة بمانع التجلط **الهيبارين Heparin** (يُميزها خط دائري أحمر على الطرف) مخصصة لدم وخز الإصبع، وتُسد من طرف واحد بـ **الصلصال البلاستيسين (Plasticine) أو الشمع** قبل الدوران.\n• **جهاز الطرد المركزي الدقيق (Micro-centrifuge):** جهاز دوران فائق السرعة يُدار لمدة **15 دقيقة** كاملة لضغط الخلايا تماماً.\n• **مسطرة قراءة الهيماتوكريت (Reading scale):** بطاقة مدرجة لحساب النسبة المئوية للكرات المتكدسة.\n• **أنبوبة بديلة:** **أنبوبة وينتروب (Wintrobe tube)** بطول 11 سم وتدريج من 0 إلى 100 مم وتستخدم لقياس الماكرو-هيماتوكريت وسرعة الترسيب."
+                    }
                 },
                 {
                     type: "compare",
-                    val1Title: { en: "Causes of Increased PCV (> Normal)", ar: "أسباب زيادة PCV" },
-                    val1: { en: "1. **Polycythemia** (excess RBCs)\n2. **Dehydration** (water loss)\n3. **Severe Diarrhea & Vomiting**\n4. **Extensive Burns** (loss of plasma)\n5. **High altitude** (hypoxia)", ar: "١. **احمرار الدم (Polycythemia)**\n٢. **الجفاف (Dehydration)**\n٣. **الإسهال والقيء الشديد**\n٤. **الحروق الشديدة** (فقدان بلازما الدم)\n٥. **المرتفعات الشاهقة** (نقص أكسجين)" },
-                    val2Title: { en: "Causes of Decreased PCV (< Normal)", ar: "أسباب انخفاض PCV" },
-                    val2: { en: "1. **Anemia** (reduced RBC mass)\n2. **Hemolysis** (destruction of RBCs)\n3. **Acute/Chronic Bleeding**\n4. **Pregnancy** (hemodilution / increased plasma volume)", ar: "١. **الأنيميا بأنواعها (Anemia)**\n٢. **تكسر كرات الدم (Hemolysis)**\n٣. **النزيف الحاد أو المزمن**\n٤. **الحمل** (بسبب تخفيف الدم وزيادة حجم البلازما)" }
+                    val1Title: { 
+                        en: "Clinical Causes of Increased PCV (> 52%)", 
+                        ar: "الأسباب الإكلينيكية لارتفاع PCV (> 52%)" 
+                    },
+                    val1: { 
+                        en: "1. **Polycythemia (Absolute):** Primary (Polycythemia vera) or Secondary due to tissue hypoxia at **High Altitudes** (compensatory erythropoietin release).\n2. **Relative Hemoconcentration (Plasma Loss):**\n   - **Dehydration** (insufficient water intake)\n   - **Severe Diarrhea and Vomiting**\n   - **Extensive Burns** (leakage of plasma through damaged capillaries)", 
+                        ar: "١. **احمرار الدم الحقيقي (Polycythemia):** أولي أو ثانوي نتيجة نقص الأكسجين في **المرتفعات الشاهقة (High altitude)** مما يحفز إفراز الإريثروبويتين.\n٢. **تركيز الدم النسبي (فقدان حجم البلازما):**\n   - **الجفاف (Dehydration)** الشديد.\n   - **الإسهال والقيء الحاد والمستمر (Diarrhea)**.\n   - **الحروق الواسعة (Burns)** نتيجة تسرب بلازما الدم من الأوعية المتضررة." 
+                    },
+                    val2Title: { 
+                        en: "Clinical Causes of Decreased PCV (< 37%)", 
+                        ar: "الأسباب الإكلينيكية لانخفاض PCV (< 37%)" 
+                    },
+                    val2: { 
+                        en: "1. **Anemias of all types:** Iron deficiency, megaloblastic, aplastic (decreased RBC mass).\n2. **Hemolysis:** Accelerated intra/extravascular destruction of erythrocytes.\n3. **Acute or Chronic Bleeding (Hemorrhage):** Direct loss of red blood cell mass.\n4. **Physiological Hemodilution of Pregnancy:** Plasma volume expands (~40-50%) significantly more than RBC mass, causing low hematocrit.", 
+                        ar: "١. **جميع أنواع فقر الدم (Anemia):** لنقص إنتاج أو تصنيع كرات الدم الحمراء.\n٢. **تكسر الدم الانحلالي (Hemolysis):** التدمير السريع لكريات الدم.\n٣. **النزيف الحاد والمزمن (Bleeding):** فقدان كرات الدم الحمراء.\n٤. **تخفيف الدم الفسيولوجي أثناء الحمل (Pregnancy):** زيادة حجم بلازما الأم بنسبة 50% مقارنة بالكرات، مما يسبب انخفاضاً فسيولوجياً في قراءة الـ PCV." 
+                    }
                 }
             ]
         }
@@ -73,182 +101,212 @@ allLectures.push({
     quiz: [
         {
             q: {
-                en: "What is the physiological definition of Packed Cell Volume (PCV)?",
-                ar: "ما هو التعريف الفسيولوجي الدقيق لحجم الخلايا المتكدسة (PCV)؟"
+                en: "According to the practical revision diagram, what is the precise physiological definition of Hematocrit (PCV)?",
+                ar: "بناءً على مخطط مراجعة العملي، ما هو التعريف الفسيولوجي الدقيق لحجم الخلايا المتكدسة (PCV)؟"
             },
             opts: {
-                en: ["PERCENTAGE OF RBCS", "CONCENTRATION OF HB", "NUMBER OF WBCS", "CLOTTING DURATION"],
-                ar: ["النسبة المئوية لحجم الكرات الحمراء", "تركيز الهيموجلوبين", "عدد كرات الدم البيضاء", "زمن التجلط"]
+                en: ["The concentration of hemoglobin in grams per deciliter", "The percentage of RBCs in the total blood volume", "The sedimentation distance of erythrocytes per unit time", "The volume ratio of plasma compared to the buffy coat"],
+                ar: ["تركيز الهيموجلوبين معبراً عنه بالجرام لكل ديسيلتر", "النسبة المئوية لحجم كرات الدم الحمراء من إجمالي حجم الدم", "مسافة سقوط كرات الدم في عمود رأسي خلال وحدة الزمن", "نسبة حجم بلازما الدم مقارنة بالطبقة البيضاء"]
             },
-            correct: 0,
+            correct: 1,
             hint: {
-                en: "PCV is defined as the percentage of red blood cells in total blood volume.",
-                ar: "الـ PCV هو النسبة المئوية لحجم كرات الدم الحمراء من إجمالي حجم الدم."
+                en: "PCV represents the fraction of total blood volume made up solely by erythrocytes.",
+                ar: "الـ PCV هو النسبة المئوية التي تشغلها كرات الدم الحمراء المتكدسة من إجمالي حجم الدم."
             }
         },
         {
             q: {
-                en: "What elements make up the thin, buff-colored layer (Buffy Coat) between plasma and RBCs?",
-                ar: "مما تتكون الطبقة الرقيقة البيضاء (Buffy Coat) الواقعة بين البلازما والكرات الحمراء؟"
+                en: "What cellular components constitute the middle thin layer known as the 'Buffy Coat'?",
+                ar: "ما هي المكونات الخلوية التي تتألف منها الطبقة الوسطى الرقيقة المسماة بـ (Buffy Coat)؟"
             },
             opts: {
-                en: ["WBCS AND PLATELETS", "RBCS AND PLASMA", "FIBRINOGEN ONLY", "PURE HEMOGLOBIN"],
-                ar: ["كرات الدم البيضاء والصفائح الدموية", "كرات الدم الحمراء والبلازما", "الفيبرينوجين فقط", "هيموجلوبين نقي"]
+                en: ["Fibrinogen threads and plasma electrolytes", "Pure reticulocytes and hemolyzed red cells", "Leukocytes (WBCs) and Platelets", "Packed erythrocytes and albumin"],
+                ar: ["خيوط الفبرينوجين وأملاح البلازما", "الخلايا الشبكية وخلايا الدم المتحللة", "كرات الدم البيضاء (WBCs) والصفائح الدموية (Platelets)", "كرات الدم الحمراء المتكدسة والألبومين"]
             },
-            correct: 0,
+            correct: 2,
             hint: {
-                en: "The buffy coat constitutes about 1% and is composed of leukocytes (WBCs) and platelets.",
-                ar: "طبقة البافي كوت تمثل 1% وتتكون من كرات الدم البيضاء والصفائح الدموية."
+                en: "The buffy coat constitutes roughly 1% of the column and contains WBCs and thrombocytes.",
+                ar: "تمثل الطبقة البيضاء 1% من عمود الدم وتتألف من كرات الدم البيضاء والصفائح الدموية."
             }
         },
         {
             q: {
-                en: "What is the normal average Packed Cell Volume (PCV) in healthy adult males?",
-                ar: "ما هو المتوسط الطبيعي لنسبة حجم الخلايا المتكدسة (PCV) في الذكور البالغين؟"
+                en: "What is the normal average and acceptable clinical range for PCV in healthy adult males?",
+                ar: "ما هي القيمة المتوسطة والمدى الطبيعي المعتمد لنسبة الـ PCV في الذكور البالغين؟"
             },
             opts: {
-                en: ["46%", "41%", "55%", "30%"],
-                ar: ["46%", "41%", "55%", "30%"]
+                en: ["Average 46% (Range: 42% – 52%)", "Average 41% (Range: 37% – 47%)", "Average 55% (Range: 50% – 60%)", "Average 35% (Range: 30% – 40%)"],
+                ar: ["المتوسط 46% (المدى: 42% – 52%)", "المتوسط 41% (المدى: 37% – 47%)", "المتوسط 55% (المدى: 50% – 60%)", "المتوسط 35% (المدى: 30% – 40%)"]
             },
             correct: 0,
             hint: {
-                en: "Males: Average is 46% (Range: 42% - 52%).",
-                ar: "المعدل الطبيعي في الذكور: المتوسط 46% (المدى من 42% إلى 52%)."
+                en: "Adult male PCV averages 46% with an expected normal span of 42% to 52%.",
+                ar: "متوسط الذكور البالغين هو 46% مع مدى يتراوح بين 42% إلى 52%."
             }
         },
         {
             q: {
-                en: "What is the normal average Packed Cell Volume (PCV) in healthy adult females?",
-                ar: "ما هو المتوسط الطبيعي لنسبة حجم الخلايا المتكدسة (PCV) في الإناث البالغات؟"
+                en: "What is the normal average PCV value documented for healthy adult females?",
+                ar: "ما هي القيمة المتوسطة الطبيعية المسجلة للـ PCV في الإناث البالغات السليمات؟"
             },
             opts: {
-                en: ["41%", "46%", "35%", "52%"],
-                ar: ["41%", "46%", "35%", "52%"]
+                en: ["46%", "48%", "41%", "33%"],
+                ar: ["46%", "48%", "41%", "33%"]
             },
-            correct: 0,
+            correct: 2,
             hint: {
-                en: "Females: Average is 41% (Range: 37% - 47%).",
-                ar: "المعدل الطبيعي في الإناث: المتوسط 41% (المدى من 37% إلى 47%)."
+                en: "Female hematocrit is slightly lower, with an average of 41% (range: 37% to 47%).",
+                ar: "قيمة الهيماتوكريت في الإناث أقل وتبلغ في المتوسط 41% (المدى من 37% إلى 47%)."
             }
         },
         {
             q: {
-                en: "How long should blood capillary tubes be spun in the micro-hematocrit centrifuge?",
-                ar: "كم دقيقة يتم تدوير الأنابيب الشعرية في جهاز الطرد المركزي الدقيق لقياس PCV؟"
+                en: "Which of the following conditions produces an increase in Packed Cell Volume (PCV)?",
+                ar: "أي من الحالات التالية تؤدي إلى ارتفاع في نسبة حجم الخلايا المتكدسة (PCV)؟"
             },
             opts: {
-                en: ["15 MINUTES", "5 MINUTES", "30 MINUTES", "60 MINUTES"],
-                ar: ["15 دقيقة", "5 دقائق", "30 دقيقة", "60 دقيقة"]
+                en: ["Iron deficiency anemia", "Severe dehydration and high burns", "Third trimester of normal pregnancy", "Acute hemolytic blood crisis"],
+                ar: ["أنيميا نقص الحديد", "الجفاف الشديد والحروق الواسعة", "الثلث الأخير من الحمل الطبيعي", "نوبات تكسير الدم الانحلالي الحادة"]
             },
-            correct: 0,
+            correct: 1,
             hint: {
-                en: "Centrifugation in a micro-hematocrit centrifuge takes 15 minutes to completely pack RBCs.",
-                ar: "يتم تدوير العينة في جهاز الطرد المركزي لمدة 15 دقيقة لاكتمال تكدس الكرات."
+                en: "Plasma volume contraction due to burns or dehydration produces hemoconcentration and elevates PCV.",
+                ar: "فقدان البلازما بسبب الجفاف أو الحروق يؤدي لتركز الدم وارتفاع نسبة الـ PCV."
             }
         },
         {
             q: {
-                en: "What material is used to seal the outer end of the capillary tube before centrifuging?",
-                ar: "ما هي المادة المستخدمة لسد طرف الأنبوبة الشعرية بإحكام قبل وضعها في جهاز الطرد المركزي؟"
+                en: "Why is PCV characteristically decreased during a healthy pregnancy?",
+                ar: "لماذا تنخفض نسبة الـ PCV بشكل ملحوظ وفسيولوجي خلال فترة الحمل الصحي؟"
             },
             opts: {
-                en: ["PLASTICINE", "COTTON", "GLUE", "ALCOHOL"],
-                ar: ["صلصال بلاستيسين", "قطن", "صمغ", "كحول"]
+                en: ["Failure of the bone marrow to respond to erythropoietin", "Excessive destruction of erythrocytes in the placenta", "Physiological hemodilution due to larger expansion of plasma volume", "Severe vitamin B12 deficiency inherent to gestational states"],
+                ar: ["فشل نخاع العظم في الاستجابة لهرمون الإريثروبويتين", "التكسير المفرط لكرات الدم داخل المشيمة", "تخفيف الدم الفسيولوجي (Hemodilution) لتوسع حجم البلازما بدرجة أكبر", "نقص حاد في فيتامين B12 ملازم للحمل"]
             },
-            correct: 0,
+            correct: 2,
             hint: {
-                en: "One end is sealed with plasticine (or wax) to prevent blood leaking during centrifugation.",
-                ar: "يسد أحد طرفي الأنبوبة بقطعة صلصال (plasticine أو شمع) لمنع خروج الدم أثناء الدوران السريع."
+                en: "Maternal plasma volume expands significantly more than the increase in red cell volume.",
+                ar: "يزداد حجم البلازما في دم الأم الحامل بنسبة أكبر بكثير من زيادة خلايا الدم الحمراء مسبباً تخفيف الدم."
             }
         },
         {
             q: {
-                en: "Which condition causes a false physiological elevation of PCV due to plasma loss?",
-                ar: "أي من الحالات التالية تسبب ارتفاعاً في نسبة PCV بسبب فقدان ماء وبلازما الدم؟"
+                en: "In the practical OSPE exam station, which capillary tube is specifically utilized for collecting blood from a finger prick for PCV?",
+                ar: "في امتحان العملي (OSPE)، ما هي الأنبوبة الشعرية المستخدمة لجمع دم وخز الإصبع مباشرة لقياس PCV؟"
             },
             opts: {
-                en: ["DEHYDRATION", "PREGNANCY", "HEMOLYSIS", "ACUTE BLEEDING"],
-                ar: ["الجفاف", "الحمل", "تكسير الدم", "النزيف الحاد"]
+                en: ["Non-heparinized blue-band capillary tube", "Heparinized red-band capillary tube", "Westergren glass pipetting tube", "Sahli graduated hemoglobin tube"],
+                ar: ["أنبوبة شعرية غير مهبْرنة ذات علامة زرقاء", "أنبوبة شعرية مهبْرنة ذات علامة حمراء (Heparinized)", "أنبوبة ويسترجرين الزجاجية الطويلة", "أنبوبة ساهلي المدرجة لتدريج الهيموجلوبين"]
             },
-            correct: 0,
+            correct: 1,
             hint: {
-                en: "Dehydration, diarrhea, and severe burns decrease plasma volume, leading to hemoconcentration and high PCV.",
-                ar: "الجفاف والإسهال والحروق تقلل حجم البلازما في الدم مسببة تركيز الدم وارتفاع نسبة الـ PCV."
+                en: "Capillary tubes containing heparin (marked with a red ring) prevent finger-prick blood from clotting immediately.",
+                ar: "الأنابيب الشعرية المحتوية على الهيبارين (المميزة بشريط أحمر) تمنع تجلط دم الوخز المباشر."
             }
         },
         {
             q: {
-                en: "What clinical condition characterized by excessive RBC production causes high PCV?",
-                ar: "ما هو المرض الإكلينيكي الناتج عن فرط إنتاج نخاع العظم لكرات الدم ويسبب زيادة كبيرة في PCV؟"
+                en: "What material is firmly applied to seal one end of the capillary tube prior to micro-centrifugation?",
+                ar: "ما هي المادة المطبقة بإحكام لسد أحد طرفي الأنبوبة الشعرية قبل وضعها في جهاز الطرد المركزي؟"
             },
             opts: {
-                en: ["POLYCYTHEMIA", "ANEMIA", "PURPURA", "HEMOPHILIA"],
-                ar: ["بولي سيثيميا", "أنيميا", "فرفرية", "هيموفيليا"]
+                en: ["Absorbent sterile cotton wool", "Plasticine or sealing wax", "Medical adhesive plaster", "Cellulose liquid glue"],
+                ar: ["قطن طبي معقم وماص", "الصلصال البلاستيسين (Plasticine) أو الشمع", "شريط لاصق طبي", "غراء سيليلوز سائل"]
             },
-            correct: 0,
+            correct: 1,
             hint: {
-                en: "Polycythemia is the condition where RBC count and PCV are significantly increased.",
-                ar: "احمرار الدم (Polycythemia) هو المرض الذي تزيد فيه كرات الدم والـ PCV بشكل ملحوظ."
+                en: "Plasticine (or wax) forms an impermeable seal that withstands high-speed centrifugal force.",
+                ar: "الصلصال (Plasticine) يوفر إغلاقاً محكماً يمنع تطاير الدم أثناء سرعة الدوران العالية."
             }
         },
         {
             q: {
-                en: "What happens to the PCV value in patients suffering from anemia?",
-                ar: "ماذا يحدث لقيمة الـ PCV عند مريض مصاب بالأنيميا (فقر الدم)؟"
+                en: "How long must the capillary tube be spun in the micro-hematocrit centrifuge to achieve complete packing?",
+                ar: "كم دقيقة يجب تدوير الأنبوبة في جهاز الطرد المركزي الدقيق لتحقيق التكدس التام للكرات؟"
             },
             opts: {
-                en: ["DECREASED", "INCREASED", "REMAINS NORMAL", "REACHES 100%"],
-                ar: ["تنخفض", "ترتفع", "تظل طبيعية", "تصل إلى 100%"]
+                en: ["5 minutes", "30 minutes", "15 minutes", "60 minutes"],
+                ar: ["5 دقائق", "30 دقيقة", "15 دقيقة", "60 دقيقة"]
             },
-            correct: 0,
+            correct: 2,
             hint: {
-                en: "In anemia, the total mass of RBCs is reduced, so PCV drops below normal range (< 37%).",
-                ar: "في الأنيميا ينخفض عدد وحجم كرات الدم الحمراء فتقل نسبة الـ PCV عن الطبيعي."
+                en: "Standard protocol in the manual dictates 15 minutes of centrifugation for micro-hematocrit determination.",
+                ar: "المدة الزمنية المعتمدة في كتاب الكلية لقياس الهيماتوكريت المصغر هي 15 دقيقة."
             }
         },
         {
             q: {
-                en: "Why is PCV typically decreased during normal pregnancy?",
-                ar: "لماذا تنخفض نسبة الـ PCV فسيولوجياً أثناء فترة الحمل الطبيعي؟"
+                en: "Besides capillary tubes, what other calibrated glass tube is listed in your materials for macro-hematocrit determination?",
+                ar: "بجانب الأنابيب الشعرية، ما هي الأنبوبة الزجاجية الأخرى المذكورة بالأدوات لقياس الـ PCV بطريقة الماكرو؟"
             },
             opts: {
-                en: ["HEMODILUTION", "LACK OF IRON", "BLOOD LOSS", "BONE MARROW FAILURE"],
-                ar: ["تخفيف الدم بزيادة البلازما", "نقص الحديد", "فقدان الدم", "فشل النخاع العظمي"]
+                en: ["Sahli comparator tube", "Wintrobe tube", "Westergren tube", "Eppendorf reaction tube"],
+                ar: ["أنبوبة ساهلي للمقارنة", "أنبوبة وينتروب (Wintrobe tube)", "أنبوبة ويسترجرين", "أنبوبة إبندورف"]
             },
-            correct: 0,
+            correct: 1,
             hint: {
-                en: "In pregnancy, maternal plasma volume expands more than RBC mass (physiological hemodilution).",
-                ar: "خلال الحمل يزداد حجم بلازما دم الأم بمعدل أكبر من تصنيع الكرات مما يؤدي لتخفيف الدم (Hemodilution)."
+                en: "The Wintrobe tube (11 cm long, graduated 0-100 mm) is used to perform macro-PCV determination.",
+                ar: "أنبوبة وينتروب (بطول 11 سم ومدرجة حتى 100 مم) تستخدم لقياس الـ PCV بطريقة الماكرو."
             }
         },
         {
             q: {
-                en: "What is the primary diagnostic significance of measuring Packed Cell Volume?",
-                ar: "ما هي الأهمية التشخيصية الأولى لقياس حجم الخلايا المتكدسة؟"
+                en: "What diagnostic parameters are derived mathematically using the PCV value alongside RBC count and hemoglobin?",
+                ar: "ما هي المؤشرات التشخيصية التي يتم حسابها رياضياً بالاعتماد على قيمة الـ PCV مع عدد الكرات وتركيز الهيموجلوبين؟"
             },
             opts: {
-                en: ["SCREENING OF ANEMIA", "MEASURING PULSE", "DETECTING FEVER", "BLOOD GROUPING"],
-                ar: ["مسح وتشخيص الأنيميا", "قياس النبض", "كشف الحمى", "تحديد فصيلة الدم"]
+                en: ["Bleeding and coagulation indices", "RBC Indices (MCV, MCH, MCHC)", "Glomerular filtration rate indices", "Cardiac output constants"],
+                ar: ["مؤشرات زمن النزف والتجلط", "مؤشرات كرات الدم الحمراء (MCV, MCH, MCHC)", "معاملات معدل الترشيح الكبيبي", "ثوابت النتاج القلبي"]
             },
-            correct: 0,
+            correct: 1,
             hint: {
-                en: "PCV is the simplest and most accurate screening test for anemia and polycythemia.",
-                ar: "يعد الـ PCV أبسط وأدق فحص لمسح واكتشاف حالات فقر الدم (الأنيميا) والبولي سيثيميا."
+                en: "PCV is mandatory to calculate red blood cell indices like MCV (Mean Corpuscular Volume).",
+                ar: "يعد الـ PCV عنصراً أساسياً لحساب مؤشرات كريات الدم (RBC Indices) كمتوسط حجم الكرية (MCV)."
             }
         },
         {
             q: {
-                en: "What glass tube can also be utilized for macro-hematocrit PCV determination?",
-                ar: "ما هي الأنبوبة الزجاجية الأخرى التي تستخدم أيضاً لقياس الهيماتوكريت بطريقة الماكرو؟"
+                en: "Why does chronic exposure to high altitudes cause a marked elevation in PCV?",
+                ar: "لماذا يسبب التواجد المزمن في المرتفعات الشاهقة ارتفاعاً ملحوظاً في قيمة الـ PCV؟"
             },
             opts: {
-                en: ["WINTROBE", "SAHLI", "WESTERGREN", "ESR TUBE"],
-                ar: ["وينتروب", "ساهلي", "ويسترجرين", "أنبوبة ESR"]
+                en: ["Hypoxia stimulates erythropoietin secretion which boosts RBC production", "Cold temperature increases capillary fragility", "Low barometric pressure destroys blood plasma proteins", "Atmospheric dryness directly causes immediate severe hemolysis"],
+                ar: ["نقص الأكسجين يحفز إفراز الإريثروبويتين الذي يزيد إنتاج كريات الدم الحمراء", "درجات الحرارة المنخفضة تزيد من هشاشة الأوعية الشعرية", "انخفاض الضغط الجوي يدمر بروتينات بلازما الدم", "جفاف الهواء الجوي يسبب تكسيراً انحلالياً فورياً لكرات الدم"]
             },
             correct: 0,
             hint: {
-                en: "Wintrobe's tube is 11 cm long and can be used for both PCV (Macro) and ESR.",
-                ar: "أنبوبة وينتروب (Wintrobe tube) تستخدم لقياس الـ PCV بطريقة الماكرو وكذلك قياس ESR."
+                en: "Hypoxia at high altitude triggers renal erythropoietin release, resulting in secondary polycythemia.",
+                ar: "نقص الأكسجين في المرتفعات يثير إفراز هرمون الإريثروبويتين من الكلى مما يؤدي لزيادة تصنيع الكرات."
+            }
+        },
+        {
+            q: {
+                en: "What is the expected PCV finding in an untreated patient suffering from severe iron-deficiency anemia?",
+                ar: "ما هي النتيجة المتوقعة لقيمة الـ PCV لدى مريض يعاني من فقر دم حاد بنقص الحديد دون علاج؟"
+            },
+            opts: {
+                en: ["Markedly elevated (> 55%)", "Significantly decreased (< 37%)", "Remains entirely constant at exactly 46%", "Fluctuates between 60% and 70%"],
+                ar: ["مرتفعة بشكل ملحوظ (> 55%)", "منخفضة بصورة واضحة (< 37%)", "تبقى ثابتة تماماً عند 46%", "تتذبذب بين 60% و 70%"]
+            },
+            correct: 1,
+            hint: {
+                en: "Anemia by definition causes a decline in total erythrocyte volume, lowering PCV below normal limits.",
+                ar: "الأنيميا تترافق حتماً بانخفاض إجمالي كتلة كرات الدم الحمراء مما يهبط بالـ PCV دون الحد الأدنى الطبيعي."
+            }
+        },
+        {
+            q: {
+                en: "On what physical property does the separation of RBCs from plasma rely during centrifugation?",
+                ar: "على أي خاصية فيزيائية يعتمد انفصال كرات الدم الحمراء عن البلازما أثناء عملية الطرد المركزي؟"
+            },
+            opts: {
+                en: ["Difference in specific gravity (density)", "Difference in surface electrical potential", "Difference in osmotic solubility coefficients", "Rate of active hemoglobin diffusion"],
+                ar: ["اختلاف الكثافة النوعية (Specific gravity)", "اختلاف فرق الجهد الكهربائي للسطح الخلوي", "تباين معاملات الذوبان الأسموزية", "معدل الانتشار النشط لجزيئات الهيموجلوبين"]
+            },
+            correct: 0,
+            hint: {
+                en: "Erythrocytes have a higher specific gravity than plasma, causing them to sediment to the bottom.",
+                ar: "كرات الدم الحمراء تمتلك كثافة نوعية أعلى من البلازما مما يجعلها تتكدس في القاع بفعل الطرد المركزي."
             }
         }
     ]
